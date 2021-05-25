@@ -12,6 +12,7 @@
                     </div>
                     <div class="form-group">
                         <label for="avatars" class=" form-control-label">Avatar</label>
+                        <img src="{{$author->avatar}}">
                         <input type="file" id="avatars" value="{{$author->avatar}}" name="avatars" class="form-control">
                     </div>
                     <div class="form-group">
@@ -37,7 +38,7 @@
                         <input type="text" id="link" name="link" value="{{$author->link}}" class="form-control">
                     </div>
 
-                    <button type="submit" class="btn btn-success">Add Author</button>
+                    <button type="submit" class="btn btn-outline-success btn-lg btn-block">Update</button>
                 </div>
             </form>
 

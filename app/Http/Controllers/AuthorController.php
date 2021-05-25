@@ -11,7 +11,7 @@ class AuthorController extends Controller
 {
     public function index()
     {
-        $authors = DB::table('authors')->get();
+        $authors = DB::table('authors')->paginate(4);
         return view('author.index', compact('authors'));
     }
 
@@ -31,7 +31,7 @@ class AuthorController extends Controller
         $author->nationality = $request->nationality;
         $author->link = $request->link;
         $author->save();
-        toastr()->success('Thêm mới thành công');
+        toastr()->success('Congratulations on your successful creation!!!');
 
         if ($request->hasFile('image')) {
             $file = $request->file('avatars');
@@ -46,7 +46,7 @@ class AuthorController extends Controller
         return view('author.edit', compact('author'));
     }
 
-    public function update($id, Request $request)
+    public function update($id, AuthorRequest $request)
     {
         $author = Author::find($id);
         $author->name = $request->name;

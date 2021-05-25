@@ -7,7 +7,7 @@
 <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang=""> <!--<![endif]-->
-<head>x
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     @yield('title')
@@ -32,7 +32,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet"/>
-   @toastr_css
+    @toastr_css
 
     <style>
         #weatherWidget .currentDesc {
@@ -77,6 +77,7 @@
         }
 
     </style>
+
 </head>
 <body>
 <!-- Left Panel -->
